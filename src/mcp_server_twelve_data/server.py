@@ -57,7 +57,6 @@ def serve(
         resolved_endpoint = resolve_path_params(endpoint, params_dict)
 
         async with httpx.AsyncClient(
-            trust_env=False,
             headers={
                 "accept": "application/json",
                 "user-agent": "python-httpx/0.24.0"
